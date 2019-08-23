@@ -35,6 +35,10 @@ io.on('connection', function(socket){
   socket.on('mousemove', function(msg){
     socket.broadcast.emit('mousemove', msg);
   });
+
+  socket.on('paintcircle', function(msg){
+    socket.broadcast.emit('paintcircle', msg);
+  });
 });
 
 
