@@ -4,6 +4,8 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var cors = require('cors');
 
+const port = process.env.PORT || 3000;
+
 app.use(express.static('public'));
 
 var allowedOrigins = ["http://localhost:9000", "http://localhost:3001", "http://localhost:3000"];
@@ -42,6 +44,6 @@ io.on('connection', function(socket){
 });
 
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+http.listen(port, function(){
+  console.log(`listening on *:${port}`);
 });

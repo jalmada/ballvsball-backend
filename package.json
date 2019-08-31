@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "PORT=80 node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.521.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "socket.io": "^2.2.0",
-    "cors": "^2.8.5"
+    "socket.io": "^2.2.0"
   }
 }
